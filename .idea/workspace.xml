@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76db33d1-5c2a-427b-82f0-8559669308d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/01-android/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01-android/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01-android/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/01-android/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/01-android/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/01-android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/01-android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +33,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -51,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670854493974</updated>
       <workItem from="1670854495870" duration="1333000" />
+      <workItem from="1670927338513" duration="563000" />
     </task>
     <servers />
   </component>
