@@ -134,13 +134,52 @@ fun main() {
         }
     println(respuestaMap)
 
+    //Sintaxis mas corta
     val respuestaMapDos = arregloDinamico.map {it + 15}
-        /*.map{valorActual: Int ->
-            return@map valorActual + 15
-        }*/
     println(respuestaMapDos)
 
-    
+/* ------------------------------------CLASE 10--------------------------------------------- */
+    //Filter -> filtra un arreglo y devuelve una condición
+    //1.
+    //2.
+    val respuestaFilter : List<Int> = arregloDinamico
+        .filter { valorActual: Int ->
+            val mayoresACinco: Boolean = valorActual > 5 //Condicion
+            return@filter mayoresACinco
+        }
+    println(respuestaFilter)
+
+    //Sintaxis mas corta
+    val respuestaFilterDos = arregloDinamico.filter { it <= 5 }
+    println(respuestaFilterDos)
+
+    //OR - AND
+    //OR any (alguno cumple)
+    //AND all (todos cumplen)
+
+    val respuestaAny: Boolean = arregloDinamico
+        .any{valorActual: Int ->
+            return@any (valorActual > 5)
+        }
+    println(respuestaAny) //true
+
+    val respuestaAll: Boolean = arregloDinamico
+        .all{valorActual: Int ->
+            return@all (valorActual > 5)
+        }
+    println(respuestaAll) //false
+
+    //REDUCE -> valor acumulado
+    //valor acumulado = 0
+    //se puede escoger como acumular
+
+    val respuestaReduce: Int = arregloDinamico
+        .reduce { //acumulado = 0 -> siempre empieza en 0
+            acumulado: Int, valorActual:Int ->
+            return@reduce (acumulado + valorActual) //logica de negocio
+        }
+    println(respuestaReduce) //83
+
 }
 
 /* ------------------------------------CLASES--------------------------------------------- */
@@ -159,7 +198,7 @@ fun main() {
         }
     }
 
-    //Clase Kottlin
+    //Clase Kotlin
     abstract class Numeros ( //Constructor PRIMARIO
     //    uno: Int, //Parametro
     //    public var uno: Int, //Propiedad de la clase publica
@@ -237,3 +276,6 @@ fun main() {
             }
         }
     }
+
+
+
