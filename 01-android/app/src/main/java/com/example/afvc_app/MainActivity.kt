@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         //Boton para list view
-        val botonListView = findViewById<Button>(R.id.btn_ir__list_view)
+        val botonListView = findViewById<Button>(R.id.btn_ir_list_view)
         botonListView
             .setOnClickListener{
                 irActividad(BListView::class.java)
