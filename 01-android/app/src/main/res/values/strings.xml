@@ -16,6 +16,7 @@
         <item>Martes</item>
         <item>Miercoles</item>
     </string-array>
+    <string name="title_activity_grecycler_view">GRecyclerView</string>
 
 
 </resources>
