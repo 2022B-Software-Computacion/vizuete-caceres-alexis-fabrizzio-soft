@@ -1,0 +1,2 @@
+Vivienda: Id Vivienda:1 :Nombre dueño:ALEXIS :Fecha de compra:2023-01-01 :Precio de la Vivienda:250000.0 :Esta Desocupada?:true
+Servicios: Id Servicio:10 :Nombre Servicio:LUZ :Fecha de registro:2023-01-10 :Precio Servicio:25.0 :Activo?:true
