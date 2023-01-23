@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    var archivo = manejadorArchivo()
+    var archivo = manejadorArchivos()
 
     do {
         println("SISTEMA DE GESTION DE VIVIENDA Y SERVICIOS")
@@ -98,4 +98,5 @@ fun main(args: Array<String>) {
             }
         }
     } while (respuestaSistema != 6)
+
 }
