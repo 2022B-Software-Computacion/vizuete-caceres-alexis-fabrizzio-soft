@@ -17,6 +17,7 @@
         <item>Miercoles</item>
     </string-array>
     <string name="title_activity_grecycler_view">GRecyclerView</string>
+    <string name="title_activity_hgoogle_maps">HGoogleMaps</string>
 
 
 </resources>
