@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:background="@color/black">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Busca ideas"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:textStyle="italic"
+                            android:textSize="15dp"></EditText>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerImagesSearch1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            tools:background="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Ideas de los creadores"
+                            android:layout_marginTop="20dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:textSize="25dp"></TextView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerImagesSearch2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="250dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            tools:background="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Ideas para ti"
+                            android:layout_marginTop="20dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:textSize="25dp"></TextView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerImagesSearch3"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="20dp"
+                            tools:background="@color/black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Populares en Pinterest"
+                            android:layout_marginTop="20dp"
+                            android:textAlignment="center"
+                            android:textStyle="bold"
+                            android:textSize="25dp"></TextView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerImagesSearch4"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="20dp"
+                            tools:background="@color/black" />
+
+                </LinearLayout>
+        </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

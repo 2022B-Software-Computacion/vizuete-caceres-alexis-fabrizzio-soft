@@ -1,5 +1,6 @@
 package com.example.tarea_vizuetealexis
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -22,12 +23,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initRecyclerView()
+
+        //
+        binding.btnSearch.setOnClickListener{
+            irActividad(SearchActivity::class.java)
+        }
     }
 
     fun initRecyclerView(){
         //Divider Item Decoration
-        val manager = GridLayoutManager(this, 3)
-        val decoration = DividerItemDecoration(this, manager.orientation)
+        val manager = GridLayoutManager(this, 2)
+        //val decoration = DividerItemDecoration(this, manager.orientation)
 
         //val recyclerView = findViewById<RecyclerView>(R.id.recyclerImages)
         //recyclerView.layoutManager = LinearLayoutManager(this)
@@ -36,6 +42,12 @@ class MainActivity : AppCompatActivity() {
         //Uso de binding
         binding.recyclerImages.layoutManager = manager
         binding.recyclerImages.adapter = ImagesAdapter(ImagesProvider.imagesList)
-        binding.recyclerImages.addItemDecoration(decoration)
+        //binding.recyclerImages.addItemDecoration(decoration)
     }
+
+    fun irActividad(clase: Class<*>){
+        val intent = Intent(this,clase)
+        startActivity(intent)
+    }
+
 }
