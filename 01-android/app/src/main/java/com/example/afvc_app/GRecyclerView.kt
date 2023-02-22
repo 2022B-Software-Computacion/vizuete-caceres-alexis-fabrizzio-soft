@@ -14,9 +14,9 @@ class GRecyclerView : AppCompatActivity() {
         // Definir lista
         val listaEntrenador = arrayListOf<BEntrenador>()
         listaEntrenador
-            .add(BEntrenador(1,"Adrian","Eguez"))
+            .add(BEntrenador(1,"Alexis","Vizuete"))
         listaEntrenador
-            .add(BEntrenador(2,"Vicente","Sarzosa"))
+            .add(BEntrenador(2,"Fabrizzio","Caceres"))
         // Inicializar Recycler View
         val recyclerView = findViewById<RecyclerView>(R.id.rv_entrenadores)
         inicializarRecyclerView(listaEntrenador,recyclerView)

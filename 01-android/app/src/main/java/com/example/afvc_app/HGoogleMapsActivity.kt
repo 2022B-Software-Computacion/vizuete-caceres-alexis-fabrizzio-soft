@@ -4,15 +4,13 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
-import com.google.android.gms.maps.model.MarkerOptions
-import kotlin.math.log
+import com.google.android.gms.maps.model.*
 
 class HGoogleMapsActivity : AppCompatActivity() {
     private lateinit var mapa: GoogleMap
@@ -23,8 +21,31 @@ class HGoogleMapsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hgoogle_maps2)
         solicitarPermisos()
         iniciarLogicaMapa()
-        //anadirMarcador()
-        //moverCamaraConZoom()
+        //Ir Carolina
+        val botonCasa = findViewById<Button>(R.id.btn_ir_casa)
+        botonCasa.
+        setOnClickListener {
+            irCasa()
+        }
+
+        val botonQuicentro = findViewById<Button>(R.id.btn_ir_quicentro)
+        botonQuicentro.
+        setOnClickListener {
+            irQuicentro()
+        }
+    }
+
+    //Funcion para mover la ubicacion del mapa
+    fun irCasa(){
+        val carolina = LatLng(-0.23066519943679012, -78.48400861699503)
+        val zoom = 17f
+        moverCamaraConZoom(carolina, zoom)
+    }
+
+    fun irQuicentro(){
+        val quicentro = LatLng(-0.17614643930451412, -78.47923705983504)
+        val zoom = 17f
+        moverCamaraConZoom(quicentro, zoom)
     }
 
     fun iniciarLogicaMapa() {
@@ -42,6 +63,37 @@ class HGoogleMapsActivity : AppCompatActivity() {
                 val titulo = "Quicentro"
                 val markQuicentro = anadirMarcador(quicentro, titulo)
                 markQuicentro.tag = titulo
+
+                //POLILINEA
+                val poliLineaUno = googleMap
+                    .addPolyline(
+                        PolylineOptions()
+                            .clickable(true)
+                            .add(
+                                LatLng(-0.17736952078775647, -78.47664068159516),
+                                LatLng(-0.17775575702365856, -78.47914050030865),
+                                LatLng(-0.1752452213391295, -78.48100731774015)
+                            )
+                    )
+                poliLineaUno.tag = "linea-1"
+
+                // POLIGONO
+                val poligonoUno = googleMap
+                    .addPolygon(
+                        PolygonOptions()
+                            .clickable(true)
+                            .add(
+                                LatLng(-0.1771546902239471,
+                                    -78.48344981495214),
+                                LatLng(-0.17968981486125768,
+                                    -78.48269198043828),
+                                LatLng(-0.17710958124147777,
+                                    -78.48142892291516)
+                            )
+                    )
+                poligonoUno.fillColor = -0xc771c4
+                poligonoUno.tag = "poligono-2" // <- ID
+                escucharListeners()
             }
         }
     }
@@ -100,7 +152,7 @@ class HGoogleMapsActivity : AppCompatActivity() {
         }
     }
 
-    fun escucharListeners(){
+    fun escucharListeners() {
         mapa.setOnPolygonClickListener {
             Log.i("mapa", "setOnPolygonClickListener ${it}")
             it.tag //ID

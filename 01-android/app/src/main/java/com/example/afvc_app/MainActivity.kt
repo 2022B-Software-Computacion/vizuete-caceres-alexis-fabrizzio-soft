@@ -115,6 +115,13 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener {
                 irActividad(HGoogleMapsActivity::class.java)
             }
+
+        //Boton Firebase
+        val botonFirebase = findViewById<Button>(R.id.btn_intent_firebase_ui)
+        botonFirebase
+            .setOnClickListener {
+                irActividad(IFirebaseUIAuth::class.java)
+            }
     }
 
     //Funcion para abrir actividad con parametros
