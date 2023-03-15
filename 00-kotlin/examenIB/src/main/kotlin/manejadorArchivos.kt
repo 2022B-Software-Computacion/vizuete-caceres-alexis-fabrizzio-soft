@@ -4,9 +4,6 @@ import java.time.LocalDate
 
 class manejadorArchivos {
 
-    //FUNCION PARA LEER EL ARCHIVO TXT
-    //SE LEE EL ARCHIVO DONDE SE USAN TOKENS Y UNA EXPRESION REGEX PARA SABER QUE SE VA A TOMAR
-    //FINALMENTE SE GUARDAN EN ARREGLOS PARA USARLOS DE MANERA MAS FACIL
     fun leer():ArrayList<Vivienda>{
         val inputStream: InputStream = File("recursos/archivo.txt").inputStream()
         val lineas = mutableListOf<String>()

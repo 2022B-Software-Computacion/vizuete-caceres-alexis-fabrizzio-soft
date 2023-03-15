@@ -117,10 +117,17 @@ class MainActivity : AppCompatActivity() {
             }
 
         //Boton Firebase
-        val botonFirebase = findViewById<Button>(R.id.btn_intent_firebase_ui)
-        botonFirebase
+        val botonFirebaseUI = findViewById<Button>(R.id.btn_intent_firebase_ui)
+        botonFirebaseUI
             .setOnClickListener {
                 irActividad(IFirebaseUIAuth::class.java)
+            }
+
+        //Boton Firestore
+        val botonFirestore = findViewById<Button>(R.id.btn_intent_firestore)
+        botonFirestore
+            .setOnClickListener {
+                irActividad(JFirebaseFirestore::class.java)
             }
     }
 
